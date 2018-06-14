@@ -1,1 +1,13 @@
-test
+---
+- hosts: routers
+  gather_facts: no
+  connection: local
+
+  tasks:
+   - name: show version
+     ios_command:
+      commands: show version
+      username: admin
+      password: cisco
+     register: ver
+   - debug: msg="{{ ver.stdout }}"
