@@ -8,4 +8,4 @@
      ios_command:
       commands: show version
      register: ver
-   - debug: msg="{{ ver.stdout | to_nice_json }}"
+   - debug: msg="{{ ver.stdout }}"
