@@ -7,7 +7,5 @@
    - name: show version
      ios_command:
       commands: show version
-      username: admin
-      password: cisco
      register: ver
    - debug: msg="{{ ver.stdout | to_nice_json }}"
